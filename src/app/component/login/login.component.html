@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login Panel</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+</head>
+
+<body>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="container">
+            <div class="myform">
+                    <h2>ADMIN LOGIN</h2>
+                    <div class="box"> 
+                        <div>
+                            <mat-form-field class="designEmail" appearance="legacy">
+                                <mat-label>Email</mat-label>
+                                <input matInput placeholder="Email" formControlName="email">
+                                <mat-error>Enter valid Email id</mat-error>
+                              </mat-form-field>
+                        </div>
+                        <div >
+                            <mat-form-field class="designEmail" appearance="legacy">
+                                <mat-label>Password</mat-label>
+                                <input matInput placeholder="Password" formControlName="password">
+                                <mat-error>Enter valid password</mat-error>
+                            </mat-form-field>
+                        </div>
+
+                    </div>
+                    <div class="forget">
+                        <button mat-button class="buttonStyleForForget">Forget Password?</button>
+                    </div>
+                    
+                    <br>
+                    <div class="loginButton" fxLayout="row" fxLayoutAlign="space-between end">
+                        <button >LOGIN</button>
+                        <button  routerLink="/dashboard">CLOSE</button>
+                    </div>
+            </div>
+            <div class="image">
+                <img
+                    src="../../../assets/sticker-png-customer-human-resource-management-payroll-human-resource-management-system-organization-human-resource-consulting-staff-management-business-thumbnail.png">
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
