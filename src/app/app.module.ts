@@ -19,6 +19,8 @@ import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {HttpClientModule } from '@angular/common/http';
+import { EmpviewdetailsComponent } from './component/empviewdetails/empviewdetails.component';
+import {MatExpansionModule} from '@angular/material/expansion';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,8 @@ import {HttpClientModule } from '@angular/common/http';
     RegisterComponent,
     DashboardComponent,
     EmployeeLoginComponent,
-    DashboardOneComponent
+    DashboardOneComponent,
+    EmpviewdetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,8 @@ import {HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     MatDialogModule,
     MatSnackBarModule,
-    HttpClientModule
+    HttpClientModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

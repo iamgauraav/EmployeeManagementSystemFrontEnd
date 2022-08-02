@@ -6,7 +6,7 @@ import { HttpService } from '../http/http.service';
   providedIn: 'root'
 })
 export class EmployeeService {
-  empToken: any;
+  emptoken: any;
 
   constructor(private httService: HttpService) { }
   employeeSignin(reqdata: any) {
@@ -18,6 +18,21 @@ export class EmployeeService {
     };
     console.log(reqdata);
     return this.httService.postservice(`https://localhost:44386/Employee/LoginEmployee?Email=${reqdata.email}&Password=${reqdata.password}`, reqdata, false, header)
+  }
+  getemployee() {
+    this.emptoken = localStorage.getItem('emptoken');
+    console.log(this.emptoken);
+    
+    
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + this.emptoken
+      }),
+      
+    };
+    console.log(header);
+    return this.httService.getService(`https://localhost:44386/Employee/GetEmployee`,true,header);
   }
 }
 

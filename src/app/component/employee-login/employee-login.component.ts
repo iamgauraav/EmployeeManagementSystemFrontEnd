@@ -35,7 +35,7 @@ export class EmployeeLoginComponent implements OnInit {
       this.employee.employeeSignin(reqData).subscribe((result:any)=>{
         console.log(result);
        localStorage.setItem('emptoken',result.token); 
-        // this.router.navigateByUrl('/viewdetail') 
+        this.router.navigateByUrl('/empviewdetails') 
         this.snackBar.open('Login Successfully..!!!', '..', {
           duration: 3000,
         }) 

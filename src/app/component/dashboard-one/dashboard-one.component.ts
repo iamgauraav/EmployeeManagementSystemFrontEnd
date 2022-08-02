@@ -50,12 +50,6 @@ export class DashboardOneComponent implements OnInit {
       }
     })
   }
-  // deleteEmployee(data: any) {
-  //   this.admin.deleteEmployee(data.employeeId).subscribe(res => {
-  //     alert("Employee Deleted Successfully")
-  //     this.getAllEmployee();
-  //   })
-  // }
 
   deleteEmployee(EmpId: any) {
     let data = {EmployeeId:EmpId}
