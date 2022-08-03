@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Registration</title>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class=title></div>
+    <mat-toolbar color="primary">
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon routerLink="/dashboard">home</mat-icon>
+      </button>
+      <span>Employee Management System</span>
+      <span class="example-spacer"></span>
+      <button mat-raised-button color="warn" (click)="openDialog()">Add Employee</button>
+    </mat-toolbar>
+
+    <div class="container">
+
+      <div class="table">
+        <table class="table1">
+          <tr>
+            <th>EmpId</th>
+            <th>Name</th>
+            <th>FatherName</th>
+            <th>DateOfBirth</th>
+            <th>DateOFJoining</th>
+            <th>Designation</th>
+            <th>CommunicationAddress</th>
+            <th>ParmanentAddress</th>
+            <th>ContactNumber</th>
+            <th>EmailId</th>
+            <th>Salary</th>
+            <th>Email</th>
+            <th>Password</th>
+
+          </tr>
+          <tr *ngFor="let data of dataSource">
+            <td>{{data.employeeId}}</td>
+            <td>{{data.name}}</td>
+            <td>{{data.fatherName}}</td>
+            <td> {{data.dateOfBirth}}</td>
+            <td>{{data.dateOfJoining}}</td>
+            <td>{{data.designation}}</td>
+            <td>{{data.communicationAddress}}</td>
+            <td>{{data.parmanentAddress}}</td>
+            <td>{{data.contactNumber}}</td>
+            <td>{{data.emailId}}</td>
+            <td>{{data.salary}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.password}}</td>
+            <div class="headbtn">
+              <td><button  class="editbtn" mat-icon-button (click)="updateEmployee(data)">
+                  <mat-icon>update</mat-icon>
+                </button></td>
+              <td><button class="deletebtn" mat-icon-button (click)="deleteEmployee(data.employeeId)">
+                  <mat-icon>delete</mat-icon>
+                </button></td>
+            </div>
+          </tr>
+        </table>
+
+
+      </div>
+    </div>
+    <form action="#">
+      <div class="button" fxLayout="row" fxLayoutAlign="space-between end">
+        <input type="submit" value="Close">
+        <input type="submit" value="Register">
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
