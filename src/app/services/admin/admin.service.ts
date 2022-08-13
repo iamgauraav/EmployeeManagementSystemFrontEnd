@@ -30,6 +30,20 @@ export class AdminService {
     ,header);    
   }
 
+  forgetpassword(data: any) {
+    console.log(data);
+
+    let header = {
+      Headers:new HttpHeaders({
+        'Content-Type': 'application/json-patch+json',
+      })
+    };
+    return this.httpService.postservice('https://localhost:44386/Admin/ForgetPassword/iamgaurav%40gmail.com',
+    data,
+    false,
+    header);    
+  }
+
   getEmployee() {
     
     console.log(" getEmployee service");

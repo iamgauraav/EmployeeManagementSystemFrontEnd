@@ -21,6 +21,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {HttpClientModule } from '@angular/common/http';
 import { EmpviewdetailsComponent } from './component/empviewdetails/empviewdetails.component';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { ForgetpasswordComponent } from './component/forgetpassword/forgetpassword.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     DashboardComponent,
     EmployeeLoginComponent,
     DashboardOneComponent,
-    EmpviewdetailsComponent
+    EmpviewdetailsComponent,
+    ForgetpasswordComponent
   ],
   imports: [
     BrowserModule,
